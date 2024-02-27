@@ -18,44 +18,22 @@ public class Trie{
             valid = false;
         }
 
-        public void add(String word, int indx){ //indx är bokstavens inx i ordet, så indx = 0 är första bokstaven
-            int lastindx = word.length();   //sista char av ordet
-            if (indx == lastindx) { //träffat en leaf
-                //System.out.print(", ");
-                valid = true; // Mark the node as a valid node
+        public void add(String word, int indx){ 
+            int lastindx = word.length();   
+            if (indx == lastindx) {
+                valid = true; 
                 return;
             }
 
-            char ch = word.charAt(indx);    //index av char i ordet
-            int charindx = code(ch); //ex. indx = 0 för "äpple" returnerar 25 för ä 
+            char ch = word.charAt(indx);    
+            int charindx = code(ch); 
 
-            if(next[charindx] == null)  //om luckan är tom, skapa en ny nod
+            if(next[charindx] == null)  
                 next[charindx] = new Node();
             
-            //System.out.print(ch);
-
-            next[charindx].add(word, indx + 1); //addera rekursivt alla chars av ordet
+            next[charindx].add(word, indx + 1);
             
         }
-
-        /*public void collect(ArrayList<String> list, String keyseq, String word){ //"2314"
-            if (valid == true) 
-                list.add(word);
-            if (keyseq.isEmpty()) 
-                return;
-            
-            char curkey = keyseq.charAt(0);
-            int keyindx = getindx(curkey);
-
-            int c = keyindx * 3;
-            for (int i = c; i <= c + 2; i++) {
-                if (next[i] != null) {
-                    char add = code(i);
-                    next[i].collect(list, keyseq.substring(1), word + add);
-                }
-            }
-
-        }*/
         
         public void collect(ArrayList<String> list, String keyseq, String word, int indx){ //"2314"
             int lastindx = keyseq.length();    
@@ -80,8 +58,8 @@ public class Trie{
 
     }
 
-    public ArrayList<String> decode(String seq){ //takes a key sequence, in a string "2314"
-        ArrayList<String> list = new ArrayList<String>();   //innehåller alla ord som kan matcha sequencen 2314 (def-ghi-abc-jkl), 2^4 possibilitie
+    public ArrayList<String> decode(String seq){ 
+        ArrayList<String> list = new ArrayList<String>();   
         String word = "";
         root.collect(list, seq, word,0);
         return list;
@@ -207,7 +185,7 @@ public class Trie{
                 return 'o';
             case 15 :
                 return 'p';
-            case 16 :        //ingen q
+            case 16 :       
                 return 'r';
             case 17 :
                 return 's';
@@ -217,7 +195,7 @@ public class Trie{
                 return 'u';
             case 20 :
                 return 'v';
-            case 21 :        //ingen w
+            case 21 :       
                 return 'x';
             case 22 :
                 return 'y';
@@ -273,9 +251,8 @@ public class Trie{
     }
 
 
-    //omvandlar key (char) till key men int (index)
     private static int getindx(char key){         
-        int a = Integer.parseInt(String.valueOf(key));        //får användas?????
+        int a = Integer.parseInt(String.valueOf(key));       
         return a-1; 
     }
 
@@ -300,11 +277,6 @@ public class Trie{
             //System.out.println(data[i] + ", encoded: "  + encodedkeys[i]+ ", decoded: " + trie.decode(encodedkeys[i]));
             //System.out.print(data[i] + ": "  + trie.converter(data[i]) + ", ");
         }
-
-        String s = "trött";
-        System.out.println(s + ", encoded: "  + trie.encode(s) + ", decoded: " + trie.decode(trie.encode(s)));
-
-
 
         //System.out.println(data[567] + ": encoded: "  + encodedkeys[567]+ ", decoded: " + trie.decode(encodedkeys[567]));
 

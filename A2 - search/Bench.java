@@ -26,7 +26,6 @@ class Bench {
             }
     }
 
-
     private static void binary(int[] array, int[] indx) {
         for (int i = 0; i < indx.length ; i++) {
             Binary.search(array, indx[i]);
@@ -49,9 +48,9 @@ class Bench {
 
     private static int[] keys(int loop, int n) {
         Random rnd = new Random();	
-        int[] indx = new int[loop]; //skapar en array av loop antal random element
+        int[] indx = new int[loop]; 
         for (int i = 0; i < loop ; i++) {
-            indx[i] = rnd.nextInt(n*5); //upper bound är 500 om n = 100
+            indx[i] = rnd.nextInt(n*5); 
         }
 
 	    return indx;
@@ -79,13 +78,9 @@ class Bench {
     
     public static void main(String[] arg) {
 
-	//int[] sizes = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600};//, 1000000, 500000, 250000, 125000};
 	int[] sizes = {100,200,400,800,1600,3200,6400,12800,25600,51200, 1000000, 64000000};//, 1000000, 500000, 250000, 125000};
 
 	System.out.printf("# searching through an array of length n, time in ns\n");
-	//System.out.printf("#%7s%8s%8s\n", "n", "linear", "binary");
-    //System.out.printf("#%7s%8s%8s%8s\n", "n", "linear   lin/n", "unsorted        lin/n", "binary     bin/log(n)");
-	//System.out.printf("#%7s%8s%8s%8s\n", "n", "linear", "      unsorted ", "    binary ");
     System.out.printf("#%7s%8s%8s%8s\n", "n", "      usorted dup", "       binary dup", "         two pointer dup");
 
     for (int n : sizes) { //iterates sizes[n], for each size, do this
@@ -96,7 +91,7 @@ class Bench {
         int[] unsortarrTwo = unsorted(n); //unsorted
 
 
-	    int[] indx = keys(loop, n); //har loop antal elemnt, nya random element för varje iteration av n (sizes)
+	    int[] indx = keys(loop, n); 
 
 	    System.out.printf("%8d", n);
 
@@ -198,14 +193,3 @@ class Bench {
     }
 
 }
-/* linear, 
-lin/n //2.9, 2.3 konstant faktor, t(n) = 2.2*n <=> O(n)
-
-bet_t/(Math.log(n)*1000) //
-
-bin/lg(n) typ 74, 75, 75 osv. proporionell mot log
-
-
-
-
-*/

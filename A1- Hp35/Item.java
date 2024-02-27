@@ -1,6 +1,6 @@
 
 
-public class Item { //objekt, varje objekt har två element, en type ocjh en value
+public class Item { 
     
     private  ItemType type;
     private int value = 0;
@@ -10,7 +10,6 @@ public class Item { //objekt, varje objekt har två element, en type ocjh en val
         this.value = value;        
     }
 
-    //metoder som bildar olika items för att sedan konstruera expressions
     public static Item Add(){
         return new Item(ItemType.ADD, 0);
     }

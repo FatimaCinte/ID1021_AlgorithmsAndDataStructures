@@ -320,10 +320,6 @@ class Bench{
 
         //System.out.printf("\nfound? " + LL.find(11) + " length: " + LL.length() + "\n");*/
 
-       
-    
-
-        
 
     }
 

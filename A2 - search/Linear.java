@@ -25,12 +25,12 @@ class Linear{
 
     public static int unsorted_dup(int[] arrayOne, int[] arrayTwo) {
 
-        int sum = 0; //antal dupletter
+        int sum = 0; 
         for (int i = 0; i < arrayOne.length; i++) {
-            for (int j = 0; j < arrayOne.length; j++) { //search the first array
+            for (int j = 0; j < arrayOne.length; j++) { 
                 if (arrayOne[i] == arrayTwo[j]){
                     sum++;
-                    break;  //inga dupletter i självaste arrayen, så när ett tal är hittat, skit i resten (breaka))       
+                    break;    
                 }
             }
         }
@@ -39,7 +39,7 @@ class Linear{
 
     public static int twopointer_dup(int[] arrayOne, int[] arrayTwo) {
 
-        int sum = 0; //antal dupletter
+        int sum = 0; 
 
         int counter = 0;
         int i = 0;
@@ -54,7 +54,7 @@ class Linear{
                 counter++;
                 i++;
             }
-            else{       //if(arrayTwo[i] < key){
+            else{      
                 i++;
             }
             

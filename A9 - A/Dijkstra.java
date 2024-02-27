@@ -159,32 +159,6 @@ public class Dijkstra{
 
         }
 
-
-        /*City from = map.lookup("Malmö");
-        City dest = map.lookup("Kiruna");
-
-        Integer dist = 0;
-        Integer stops = 0;
-
-        long t0 = System.nanoTime();
-        Dijkstra dij = new Dijkstra(map);
-        dij.search(from, dest);
-        long t = (System.nanoTime() - t0);
-
-        dist = dij.shortestDist(dest);
-        stops = 0;
-
-        System.out.println("From " + from.name + " to " + dest.name + ", shortest path: " + dij.shortestDist(dest) + ", ((" + t/1000 + "))");*/
-
-        /*for(City prv = dest; prv != null; prv = dij.from(prv)){
-            System.out.println(" -- " + prv.name);
-            stops++;
-        }
-
-        if(dest != null){
-            System.out.println(" -- " + prv.name);
-        }*/
-
         
     }
 

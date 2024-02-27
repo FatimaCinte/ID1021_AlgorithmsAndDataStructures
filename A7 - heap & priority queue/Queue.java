@@ -203,42 +203,5 @@ public class Queue { // implements priorityqueue
         }*/
 
 
-        /*Queue q = new Queue();
-
-        q.enqueue(2);
-        q.enqueue(4);
-        q.enqueue(6);
-        q.enqueue(8);
-        q.enqueue(12);
-
-
-        q.enqueue(14);
-        q.enqueue(16);
-        q.enqueue(18);
-        q.enqueue(20);
-        q.enqueue(22);
-        q.enqueue(24);
-        q.enqueue(26);
-        q.enqueue(28);
-        q.enqueue(30);
-        q.enqueue(32);
-
-
-
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );*/
     }
 }

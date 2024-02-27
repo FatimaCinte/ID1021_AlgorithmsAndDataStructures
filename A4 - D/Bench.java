@@ -28,108 +28,15 @@ public class Bench{
         return cellarray;
     }
 
-
-
     //random k keys between 0 and n-1
     public static int[] keys(int k, int n) {
         Random rnd = new Random();	
-        int[] indx = new int[k]; //skapar en array av loop antal random element
+        int[] indx = new int[k]; 
         for (int i = 0; i < k ; i++) {
-            indx[i] = rnd.nextInt(n-1); //upper bound är 500 om n = 100
+            indx[i] = rnd.nextInt(n-1); 
         }
 
 	    return indx;
-    }
-
-    public static void benchcheckprint(){
-
-        /*int n = 8;
-        int k = 5;
-
-        int[] keys = keys(k, n); //indices of the cells to unlink and insert
-        
-        DoublyList list = new DoublyList();
-
-        list.makeList(n);
-
-        //cell array with references to list
-        Cell[] cellarray = new Cell[n];
-        Cell nxt = list.first;
-        int i = 0;
-        while(nxt != null){
-            cellarray[i] = nxt;
-            nxt = nxt.next;
-            i++;
-        }
-
-        list.printList();
-
-        Cell el = list.first;
-        for(int j = 0; j < k; j++){
-            el = cellarray[keys[j]];
-
-            System.out.print("\nel.head to unlink & insert: " + el.head + ", " + "the random key/the index of cellarray is: " + keys[j]);
-            System.out.println();
-
-            list.unlink(cellarray[keys[j]]);
-            list.printList();
-            System.out.println();
-
-            list.insertFirst(cellarray[keys[j]]);
-            list.printList();
-            System.out.println();
-            
-        }*/
-
-        /*int n = 8;
-        int k = 5;
-
-        int[] keys = keys(k, n); //indices of the cells to unlink and insert
-        
-        SingleList list = new SingleList();
-                list.add(11);
-        list.add(22);
-        list.add(33);
-        list.add(44);
-        list.add(55);
-        list.add(66);
-        list.add(77);
-        list.add(88);
-        //list.makeList(n);
-        list.printList();
-
-        //cell array with references to list
-        Cell[] cellarray = new Cell[n];
-        Cell nxt = list.first;
-        int i = 0;
-        while(nxt != null){
-            cellarray[i] = nxt;
-            nxt = nxt.next;
-            i++;
-        }
-
-        list.printList();
-
-        Cell el = list.first;
-        for(int j = 0; j < k; j++){
-            el = cellarray[keys[j]];
-
-            System.out.print("\nel.head to unlink & insert: " + el.head + ", " + "the random key/the index of cellarray is: " + keys[j]);
-            System.out.println();
-
-            list.unlink(cellarray[keys[j]]);
-            list.printList();
-            System.out.println();
-
-            list.insertFirst(cellarray[keys[j]]);
-            list.printList();
-            System.out.println();
-            
-        }*/
-
-
-
-
     }
 
 
@@ -145,7 +52,6 @@ public class Bench{
     
 
         listDLL.printList();*/
-
 
 
         //int[] sizes = {100,200,400,800,1000,1600,3200,6400,12800, 25600, 51200, 102400};

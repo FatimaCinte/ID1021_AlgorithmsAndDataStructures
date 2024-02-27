@@ -21,7 +21,7 @@ public class Paths {
         
         Integer shrt = null;
 
-        for (Connection conn : from.neighbours) { //conn förbindelsen till Lund, Connection har staden och avstånd
+        for (Connection conn : from.neighbours) { 
             Integer dist = shortest(conn.city, to);
             if(dist != null){
                 if ((shrt == null) || (shrt > dist + conn.distance)){

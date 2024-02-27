@@ -118,7 +118,7 @@ class LinkedHeap{ //implements PriorityQueue
 
             if (cur.left != null && (cur.right == null || cur.left.prio < cur.right.prio)) 
                 tempcur = cur.left;    
-            else if(cur.right != null)  //behvös?
+            else if(cur.right != null)  
                 tempcur = cur.right;   
             
             if (tempcur != null && tempcur.prio < incrValue) {
@@ -134,61 +134,14 @@ class LinkedHeap{ //implements PriorityQueue
         }
 
         return depth;
-        
-        /*while (cur != null) {
-            Node tempcur = null;
-                                    //&& behöves andra villkoret?
-            if (cur.left != null && (cur.right == null || cur.left.prio < cur.right.prio)) //gå left om right är tom eller om left har högre prio än höger (talet på vänster är mindre)
-                tempcur = cur.left;    //spara left noden i minChild
-            else if(cur.right != null)  //behvös?
-                tempcur = cur.right;   
-        
-            //if (cur.left != null) 
-            //    tempcur = cur.left;   
-    
-        
-            if (tempcur != null && tempcur.prio < incrValue) {
-                // Swap the current node with the smaller child
-                Node temp = cur;
-                cur = tempcur;
-                tempcur = temp;
-                
-                depth++;
-            }
-            else 
-                break; // Heap property is satisfied
-        }
-        
-        return depth;*/
-        /*int depth = 0;
-
-        Node cur = root.left;
-        int incrroot = root.prio + incr;
-        root.prio += incr;
-
-        if(root.left == null && root.right == null){
-            return 0;
-        }
-        
-        while(cur.left != null && cur.left.prio < incrroot){
-
-                Node temp = cur;
-                cur = root;
-                root = temp;
-
-                depth++;
-                cur = cur.left;
-            }
-            return depth;*/
-        
     
     }
     
     public static int[] keys(int n) {
         Random rnd = new Random();	
-        int[] indx = new int[n]; //skapar en array av loop antal random element
+        int[] indx = new int[n]; 
         for (int i = 0; i < n ; i++) {
-            indx[i] = rnd.nextInt(n); //upper bound är 500 om n = 100
+            indx[i] = rnd.nextInt(n); 
         }
 
 	    return indx;
@@ -287,70 +240,6 @@ class LinkedHeap{ //implements PriorityQueue
     public static void main(String[] args){
 
         benchpush();
-        //benchHeap();
-
-        /*LinkedHeap q = new LinkedHeap();
-
-        q.enqueue(2);
-        q.enqueue(4);
-        q.enqueue(6);
-        q.enqueue(8);
-        q.enqueue(12);
-
-
-        q.enqueue(14);
-        q.enqueue(16);
-        q.enqueue(18);
-        q.enqueue(20);
-        q.enqueue(22);
-        q.enqueue(24);
-        q.enqueue(26);
-        q.enqueue(28);
-        q.enqueue(30);
-        q.enqueue(32);
-
-
-
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        
-        
-
-        q.enqueue(2);
-        q.enqueue(4);
-        q.enqueue(6);
-        q.enqueue(8);
-        q.enqueue(12);
-
-
-        q.enqueue(14);
-        q.enqueue(16);
-        q.enqueue(18);
-        q.enqueue(20);
-        q.enqueue(22);
-        q.enqueue(24);
-        q.enqueue(26);
-        q.enqueue(28);
-        q.enqueue(30);
-        q.enqueue(32);
-
-        //System.out.println("item removed " + q.dequeue() );
-
-        System.out.println("depth: " + q.push(1000) );*/
-
 
 
     }

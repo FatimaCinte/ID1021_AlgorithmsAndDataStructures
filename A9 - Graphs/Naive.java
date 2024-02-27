@@ -13,7 +13,7 @@ public class Naive {
         Integer shrt = null;
         //System.out.println("conn: " + from.name);
 
-        for (Connection conn : from.neighbours) { //för varje neighbour
+        for (Connection conn : from.neighbours) {
             Integer dist = shortest(conn.city, to, max - conn.distance); //finds the shortest distance from city to destination,max - neighbour - neighbour's neighbour - etc
             r++;
             if(dist != null){
@@ -30,16 +30,6 @@ public class Naive {
     public static void main(String[] args) {
         Map map = new Map("trains.csv");
 
-        /*String from = args[0];
-        String to = args[1];
-        Integer max = Integer.valueOf(args[2]);
-
-
-        long t0 = System.nanoTime();
-        Integer dist = shortest(map.lookup(from), map.lookup(to), max);
-        long time = (System.nanoTime() - t0)/1_000_000;
-
-        System.out.println("shortest: " + dist + " min (" + time + " ms)");*/
         String from = "Stockholm";
         String to = "Umeå";
         Integer max = 800;

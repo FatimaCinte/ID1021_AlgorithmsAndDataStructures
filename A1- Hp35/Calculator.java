@@ -2,23 +2,20 @@
 
 public class Calculator {
     
-    Item[] expr; //en array av typen Item (objekt som antingen har type eller siffra)
-    int ip; //pointer
-    Stack stack; //STATIC
+    Item[] expr; 
+    int ip; 
+    Stack stack; 
 
-    public Calculator(Item[] expr) {    //får arrayen som parameter 
-        this.expr = expr;   //pekar på arrayen
-        this.ip = 0;        //if empty stack???
-        this.stack = new Static(2);  //STATIC 
+    public Calculator(Item[] expr) {     
+        this.expr = expr;   
+        this.ip = 0;        
+        this.stack = new Static(2);  
     }
 
 
-    public void step() { //kollar vilken type det är (för item) och switchar till rätt operation
-                            //om type är ADD, then utför vi addition
-        
-        Item nxt = expr[ip++]; //temporär Item som pekar på nästa objekt/index på arrayen
-        
-        switch(nxt.type()) { //om den expr[ip++] är ADD, then gå till case ADD etc.
+    public void step() { 
+        Item nxt = expr[ip++];
+        switch(nxt.type()) { 
             case ADD : {
                 int y = stack.pop();
                 int x = stack.pop();
@@ -50,11 +47,11 @@ public class Calculator {
         }
     }
 
-    public int run() { //exekverar en gång på taget (step at a atime)
-        while ( ip < expr.length ) {    //så länge pointer inte är på sista index på arrayen (senaste poppade item)
-        step(); //step
+    public int run() { 
+        while ( ip < expr.length ) {    
+        step(); 
         }
-        return stack.pop(); //poppa stacken
+        return stack.pop(); 
     }
 
 

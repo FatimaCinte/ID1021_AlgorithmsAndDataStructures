@@ -73,28 +73,6 @@ class ArrHeap{
         int left = indx*2 + 1;
         int right = indx*2 + 2;
 
-        /*if(right < curSize){
-            if(heap[left] < heap[right]){
-                if(heap[left] < heap[indx]){
-                    swap(left, indx);
-                    depth++;
-                    depth = sink(left, depth);
-                }
-                else{
-                    if(heap[right] < heap[indx]){
-                        swap(right, indx);
-                        depth++;
-                        depth = sink(right, depth);
-                    }
-                }
-            }
-            else if(left < curSize){
-                if(heap[left] < heap[indx])
-                    swap(left, indx);
-            }
-        }
-        return depth;*/
-
         int smallest = indx;
         if(left < curSize && heap[left] < heap[smallest])
             smallest = left;
@@ -170,7 +148,7 @@ class ArrHeap{
 
     }
 
-    
+    //long bench...
     public static void benchHeap(){
         //int[] sizes = {100,200,400,800,1600,3200,6400,12800, 25600,51200,102400};
         int[] sizes = {1000,2000,4000,8000,16000,32000,64000,128000, 256000,512000,1024000};
@@ -228,6 +206,7 @@ class ArrHeap{
         }
     }
     
+    //lol
     public static void benchboth(){
         int[] sizes = {1000,2000,4000,8000,16000,32000,64000,128000, 256000,512000,1024000};
 
@@ -333,49 +312,5 @@ class ArrHeap{
     public static void main(String args[])
     {
         benchboth();
-        //ArrDepth();
-        //LinkedDepth();
-        //benchHeap();
-
-
-        /*ArrHeap q = new ArrHeap(34);
-        q.enqueue(2);
-        q.enqueue(4);
-        q.enqueue(6);
-        q.enqueue(8);
-        q.enqueue(12);
-
-
-        q.enqueue(14);
-        q.enqueue(16);
-        q.enqueue(18);
-        q.enqueue(20);
-        q.enqueue(22);
-        q.enqueue(24);
-        q.enqueue(26);
-        q.enqueue(28);
-        q.enqueue(30);
-        q.enqueue(32);
-
-
-        /*System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("item removed " + q.dequeue() );
-        System.out.println("depth: " + q.push(10008) );*/
-
-
-
     }
 }

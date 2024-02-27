@@ -42,7 +42,6 @@ class ListQuickSort{
         
     }
 
-    //lägg till pivot el sist i S array, pivot är första i S
     public static Node partition(ListQuickSort smaller,
                                     ListQuickSort larger, Node min){
         Node cur = min.next;    
@@ -117,30 +116,7 @@ class ListQuickSort{
         }
     }
     
-    /*public void makeList(int[] keys, int n){
-        for (int i = 0; i < n; i++){
-            Node el = new Node(keys[i], null); 
-            if(first != last){  
-                el.next = first;   
-                first = el;    
-                }
-            first = el;    
-        }
-    }*/
-
-    /*public void printList() {
-        System.out.print("  [");
-        Node cur = this.first;
-        if (cur != null) {
-            System.out.print(cur.value);
-            cur = cur.next;
-        }
-        while (cur != null) {
-            System.out.print(", " + cur.value);
-            cur = cur.next;
-        }
-        System.out.println("]");
-    }*/
+  
     
     public void printList(int size) {
       System.out.print("  [");
@@ -153,49 +129,7 @@ class ListQuickSort{
         System.out.println("]");
 
     }
-    /*public void printList(int size, Node c) {
-      System.out.print("  [");
 
-        while(c != null){
-            System.out.print(", " + c.value);
-            c = c.next;
-        }
-        System.out.println("]");
-
-    }*/
-
-    /*public ListQuickSort copyList(Node f){
-        if(f.next == null)
-            return null;
-  
-        ListQuickSort clone = new ListQuickSort();
-        Node cur = f;
-        clone.first = cur;
-        while(f != null){
-            cur = new Node(f.value, null);
-       
-            //System.out.print(", " + cur.value);
-            cur = cur.next;
-            f = f.next;
-        }
-        //clone.last = new Node(last.value, null);
-
-        return clone;
-    }*/
-    
-    /*public ListQuickSort copyList(ListQuickSort l){
-        if(l.first.next == null)
-            return null;
-        
-        ListQuickSort clone = new ListQuickSort();
-        Node cur = l.first;
-        while(cur != null){
-            cur = new Node(cur.value, null);
-            cur = cur.next;
-        }
-
-        return clone;
-    }*/
 
     public ListQuickSort copyList(ListQuickSort list){
         ListQuickSort copy = new ListQuickSort();

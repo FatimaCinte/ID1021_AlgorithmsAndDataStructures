@@ -8,39 +8,39 @@ class SingleList{
     }
     
         public void add(int item){
-            Cell el = new Cell(item); //skapar en ny cell med head = item, tail är null
+            Cell el = new Cell(item); 
 
-            if(first != null){  //om first inte är null (om det finns element i listan)
-                el.next = first;   //sätt tail pekar på det som first pekar på
-                first = el;    //sätt att first pekar endast på nya elementet nu
+            if(first != null){  
+                el.next = first;  
+                first = el;    
             }
-            first = el;    //om listan är tom, sätt att first pekar på nya el direkt
+            first = el;   
         }
 
         
         public boolean find(int item){
-            Cell nxt = first;   //börja i första cellen
+            Cell nxt = first;  
             while(nxt != null){
-                if(nxt.head == item)    //om item hittad, return true
+                if(nxt.head == item)    
                     return true;
-                nxt = nxt.next; //iterate to next cell
+                nxt = nxt.next; 
             }
                 return false;
         }
 
         public void remove(int item){
-            Cell nxt = first;   //börja i första cellen
-            Cell prev = null;   //prev börjar innan first så den är null
+            Cell nxt = first;  
+            Cell prev = null;   
 
-            while(nxt != null){ //när det finns element i listan
-                if(nxt.head == item){   //om item hittad
-                    if(prev != null)    //inte första cellen
-                        prev.next = nxt.next;   //prev hoppar över item o pekar på nästa tail
+            while(nxt != null){ 
+                if(nxt.head == item){  
+                    if(prev != null)   
+                        prev.next = nxt.next;  
                     else
-                        first = nxt.next;   //item är först i listan, first kmr hoppa över o peka på nxt.tail
+                        first = nxt.next;   
                 }
-                prev = nxt; //iterate till nästa cell, prev till nxt
-                nxt = nxt.next; //iterate till nästa cell, nxt till nästa nxt
+                prev = nxt; 
+                nxt = nxt.next; 
             }
         }
         
@@ -48,19 +48,19 @@ class SingleList{
         public void unlink(Cell del){
             Cell nxt = first;
             Cell prev = null;
-             while(nxt != null){ //när det finns element i listan
-                if(nxt == del){   //om item hittad
-                    if(prev != null){    //inte första cellen
-                        prev.next = nxt.next;   //prev hoppar över item o pekar på nästa tail
+             while(nxt != null){ 
+                if(nxt == del){   
+                    if(prev != null){  
+                        prev.next = nxt.next;  
                         return;
                     }
                     else{
-                        first = nxt.next;   //item är först i listan, first kmr hoppa över o peka på nxt.tail
+                        first = nxt.next;   
                         return; 
                     }
                 }
-                prev = nxt; //iterate till nästa cell, prev till nxt
-                nxt = nxt.next; //iterate till nästa cell, nxt till nästa nxt
+                prev = nxt;
+                nxt = nxt.next; 
             }
             return;
 
@@ -68,10 +68,10 @@ class SingleList{
         
         public int length(){
             int number = 0;
-            Cell nxt = first; //första elementet i listan
-            while (nxt != null){    //om första elementet pekar till en annan element
-                number++;   //increment counter
-                nxt = nxt.next; //gå till nästa cell med sin nya tail being nxt.tail 
+            Cell nxt = first; 
+            while (nxt != null){   
+                number++;  
+                nxt = nxt.next; 
             }
             return number;
         }
@@ -86,16 +86,15 @@ class SingleList{
             this.first = last;
         }
 
-        //a.append(b), b läggs till i slutet av a, b blir tom, a är a+b
         public void appendList(SingleList b) {
             Cell nxt = this.first;
             Cell prev = null;
-            while (nxt.next != null) {  //go through the list until we find the last cell with its tail == null
-                prev = nxt; //set nxt to prev
-                nxt = nxt.next; //go to next cell
+            while (nxt.next != null) { 
+                prev = nxt; 
+                nxt = nxt.next; 
             }
-            nxt.next = b.first; //nxt.tail is == null aka its the last cell, set it to b.first to add the entire next list
-            b.first = null; //töm listan
+            nxt.next = b.first; 
+            b.first = null; 
             
         }
 
@@ -109,11 +108,11 @@ class SingleList{
 
 
         public void insertFirst(Cell key){
-            if(first != null){  //om first inte är null (om det finns element i listan)
-                key.next = first;   //sätt tail pekar på det som first pekar på
-                first = key;    //sätt att first pekar endast på nya elementet nu
+            if(first != null){  
+                key.next = first;  
+                first = key;   
             }
-            first = key;    //om listan är tom, sätt att first pekar på nya el direkt
+            first = key;    
         }
 
 

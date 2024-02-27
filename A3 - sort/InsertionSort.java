@@ -10,7 +10,7 @@ class InsertionSort{
 
     public static void sort(int[] array){
         for (int i = 0; i < array.length; i++) {
-            for (int j = i; 0 < j; j--) { //         for (int j = i; (0 < j) && (array[j-1] > array[j]); j--) {
+            for (int j = i; 0 < j; j--) { //         
 
                 if(array[j-1] < array[j])
                     break;

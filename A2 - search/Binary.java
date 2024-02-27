@@ -7,16 +7,16 @@ class Binary{
         int last = array.length - 1;
                     
         while(true){
-            int index = (first + last)/2; //mitten
+            int index = (first + last)/2; 
             
-            if (array[index] == key){ //if the element is found in the middle index
+            if (array[index] == key){ 
                 return true;
             }
-            if (array[index] < key && index < last){ //if the element is larger than the element in the middle
+            if (array[index] < key && index < last){ 
                 first = index + 1;
                 continue;
             }
-            if (array[index] > key && index < last){  //
+            if (array[index] > key && index < last){  
                 last = index - 1;
                 continue;
             }

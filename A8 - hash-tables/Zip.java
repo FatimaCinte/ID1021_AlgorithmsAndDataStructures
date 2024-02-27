@@ -45,29 +45,6 @@ public class Zip implements lookups<String> {
     }
 
     public String binary(String zip){
-        /*int min = 0;
-        int max = this.max;
-
-        while(true){
-            int mid = (max + min)/2;
-
-            int comparison = zip.compareTo(data[mid].code);
-
-            if (comparison == 0) {
-                return data[mid].name;
-            } else if (comparison > 0 && mid < max) {
-                min = mid + 1;
-                continue;
-            } 
-            if(comparison < 0 && mid > min){
-                max = mid - 1;
-                continue;
-            }
-            break;
-            
-        }
-        return null;*/
-
 
         int min = 0;
         int max = this.max;  

@@ -7,18 +7,18 @@ class DoublyList{
     }
     
     public void add(int item){
-        Cell el = new Cell(item); //skapar en ny cell med head = item, tail är null
+        Cell el = new Cell(item); 
 
-        if(first != null){  //om first inte är null (om det finns element i listan)            
-            el.next = first;   //sätt tail pekar på det som first pekar på
-            first.prev = el;    //sätt att first pekar endast på nya elementet nu
+        if(first != null){             
+            el.next = first;   
+            first.prev = el;    
             
             el.prev = null;
-            first = el;    //om listan är tom, sätt att first pekar på nya el direkt
+            first = el;    
 
         }
         
-        first = el;    //om listan är tom, sätt att first pekar på nya el direkt
+        first = el;    
     }
 
 
@@ -26,14 +26,14 @@ class DoublyList{
         Cell el = first;
         for(int i = 0; i < n; i++){
             el = new Cell(i);
-            if(first != null){  //om first inte är null (om det finns element i listan)
-                el.next = first;   //sätt tail pekar på det som first pekar på
-                first.prev = el;    //sätt att first pekar endast på nya elementet nu
+            if(first != null){  
+                el.next = first;   
+                first.prev = el;   
             }
             first = el; 
         }
 
-        /*ELLER
+        /*or
         for(int i = 0; i < n; i++)
             list.add(i);*/
 
@@ -51,10 +51,10 @@ class DoublyList{
 
     public int length(){
         int number = 0;
-        Cell el = first; //första elementet i listan
-        while (el != null){    //om elementet pekar till en annan element, om == null då är det sista elementet
-            number++;   //increment counter
-            el = el.next; //gå till nästa cell med sin nya tail being nxt.tail 
+        Cell el = first; 
+        while (el != null){    
+            number++;   
+            el = el.next; 
         }
         return number;
     }

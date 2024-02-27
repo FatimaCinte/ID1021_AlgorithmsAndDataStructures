@@ -21,7 +21,7 @@ public class Paths {
 
         Integer shrt = null;
 
-        for (Connection conn : from.neighbours) { //conn förbindelsen till Lund, Connection har staden och avstånd
+        for (Connection conn : from.neighbours) { 
             
             Integer dst = shortest(conn.city, to);
             if(dst != null){
@@ -43,17 +43,6 @@ public class Paths {
         Paths path = new Paths();
         Better betterpath = new Better();
 
-        /*String from = args[0];
-        String to = args[1];
-        Integer max = Integer.valueOf(args[2]);
-
-
-        long t0 = System.nanoTime();
-        Integer dist = shortest(map.lookup(from), map.lookup(to), max);
-        long time = (System.nanoTime() - t0)/1_000_000;
-
-        System.out.println("shortest: " + dist + " min (" + time + " ms)");*/
-        
         
         String from = "Malmö";
         String to = "Kiruna";

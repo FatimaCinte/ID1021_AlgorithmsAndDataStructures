@@ -131,13 +131,13 @@ public class Zop implements lookups<Integer> {
     public void bucketadd(int key, int mod){
         int indx = hash(key,mod); //key 111 15 ---> indx = 11115/mod
 
-        while(true){    //går igenom bucket arrayn
-            if(buckets[buckets.length - 1] == 0){    //om det finns tom plats
-                buckets[buckets.length - 1] = indx; //lägg till hash value av key
+        while(true){    
+            if(buckets[buckets.length - 1] == 0){    
+                buckets[buckets.length - 1] = indx; 
                 break;
             }
-            else{  //om buckets är full --> vi är i slutet 
-                int[] newbucket = new int[n*2];//allokera en ny större array för att lägga till key
+            else{ 
+                int[] newbucket = new int[n*2];
                 for(int i = 0; i < buckets.length; i++)
                     newbucket[i] = buckets[i];
                 

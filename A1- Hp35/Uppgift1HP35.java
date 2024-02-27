@@ -26,7 +26,7 @@ class Uppgift1Hp35 {
 
         // (2 × 2) + (3 × 6) ,,,,, 2 2 × 3 6 × +
 
-        
+        //test
            Item[] expr = {
             Item.Value(2),
             Item.Value(2),
@@ -54,16 +54,6 @@ class Uppgift1Hp35 {
             Item.Add(),
 
         };
-
-
-        //(2*2*2) + (2*2*2) + (2*2*2) = 24
-       /*Item[] expr = {
-
-   
-            Item.Mul()
-
-        };*/
-
 
         Calculator calc = new Calculator(expr);
         int res = calc.run();

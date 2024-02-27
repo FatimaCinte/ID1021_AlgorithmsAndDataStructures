@@ -31,7 +31,7 @@ public class Hash {
                 bucket = new Node[1];
 
             if(bucket[bucket.length - 1] != null){
-                Node[] newbucket = new Node[bucket.length*2];//allokera en ny större array för att lägga till key
+                Node[] newbucket = new Node[bucket.length*2];
                 for(int j = 0; j < bucket.length; j++)
                     newbucket[j] = bucket[j];
                 
@@ -49,8 +49,6 @@ public class Hash {
         public String bucketSearch(Integer zipcode){
             for (int i = 0; i < bucket.length; i++) {
                 if (zipcode.equals(bucket[i].code)) {
-                                         //               count++;
-
                     return bucket[i].name;
                 }
             }
@@ -165,40 +163,6 @@ public class Hash {
         hash.hashKeys(mod);
         System.out.print(count);
 
-       // System.out.println(hash.lookupXX(52025, mod));
-
-        //System.out.print("mod is:" + mod + ", count " + count);
-
-
-        //for(int i = 0; i < max; i++)
-        //    hash.add(keys[i]);
-
-        //hash.collisions(m);
-
-        
-        /*for(int i = 0; i < maximum; i++)
-            System.out.print(keys[i] + ", ");*/
-           // hash.collisions(mod);
-
-          /*hash.hashKeys(mod);
-        System.out.println();
-        //hash.hashKeys(mod);
-
-            hash.collisions2(mod);*/
-        
-        /*for(int i = maximum-25; i < maximum; i++)
-            System.out.print(keys[i] + ", ");*/
-
-
-
-        /*for(int i = 0; i < mod; i++)
-            System.out.print(keys[i] + ", ");*/
-        /*String b = bench.binary(11115);
-        String l = bench.linear(12556);
-
-        b.hashCode();
-
-        System.out.print("binary: " + b + ", linear: " + l);*/
 
     }
 
