@@ -1,4 +1,5 @@
-All the course assignments are written & compiled in Java and cover the following content:
+All of the course assignments are written in Java and compiled by running the main class of each folder.
+The assignments cover the following topics:
 
 Basic algorithm analysis:
 - Simpler analysis with respect to the resource needs of algorithms in the form of time and memory.
@@ -14,3 +15,4 @@ Fundamental data structures:
 
 Program Design:
 - design and implementation of programmes that use basic algorithms and data structures to solve computer science problems.
+
