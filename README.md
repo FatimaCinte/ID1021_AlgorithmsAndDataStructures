@@ -1,4 +1,4 @@
-All of the course assignments are written in Java and compiled by running the main class of each folder.
+All of the course assignments are written in Java and compiled by running the main method of each program.
 The assignments cover the following topics:
 
 Basic algorithm analysis:
