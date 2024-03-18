@@ -1,4 +1,4 @@
-All of the course assignments are written & compiled in Java and cover the following content:
+All the course assignments are written & compiled in Java and cover the following content:
 
 Basic algorithm analysis:
 - Simpler analysis with respect to the resource needs of algorithms in the form of time and memory.
